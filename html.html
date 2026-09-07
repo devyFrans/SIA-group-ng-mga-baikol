@@ -14,38 +14,50 @@
     <div id="login-page" class="page">
         <div class="card blue-card login-card">
 
-            <h1 class="title">SIA 1 GROUP PROJECT</h1>
+            <h1 class="title">Student Management System</h1>
             <p class="subtitle">Student Form</p>
 
             <!-- Row 1: name fields -->
             <div class="form-row">
                 <div class="field field-grow">
+                    <p>Surname</p>
                     <input type="text" id="lastname" placeholder="e.g. Niog Pogi">
-                    <label for="lastname">Lastname</label>
                 </div>
                 <div class="field field-grow">
+                    <p>Given Name</p>
                     <input type="text" id="givenname" placeholder="e.g. Joshua Mark">
-                    <label for="givenname">Given Name</label>
                 </div>
                 <div class="field field-grow">
+                    <p>Middle Initial</p>
                     <input type="text" id="middleinitial" placeholder="e.g. Hanna">
-                    <label for="middleinitial">Middle Initial</label>
                 </div>
                 <div class="field field-small">
+                    <p>Suffix</p>
                     <input type="text" id="suffix" placeholder="Jr/Sr..">
-                    <label for="suffix">Suffix</label>
                 </div>
             </div>
-
+            
             <!-- Row 2: program + section -->
             <div class="form-row">
                 <div class="field field-wide">
-                    <input type="text" id="program" placeholder="Bachelor of Science in Information Technology">
-                    <label for="program">Program</label>
+                    <p>Program</p>
+                    <select id="program" name="program" id="selection-prgm">
+                        <option value="">Select Program</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BSEd">BSEd</option>
+                        <option value="BSBA">BSBA</option>
+                        <option value="BSA">BSA</option>
+                    </select>
                 </div>
                 <div class="field field-medium">
-                    <input type="text" id="section" placeholder="3C">
-                    <label for="section">Section and Year</label>
+                    <p>Year & Section</p>
+                        <select id="program" name="section">
+                        <option value="">Select Section-yr</option>
+                        <option value="3A">3A</option>
+                        <option value="3B">3B</option>
+                        <option value="3C">3C</option>
+                        <option value="3D">3D</option>
+                    </select>
                 </div>
             </div>
 
@@ -53,7 +65,7 @@
             <div class="form-row login-row">
                 <div class="field field-login">
                     <button type="button" id="login-btn">LOGIN</button>
-
+                    
                 </div>
             </div>
 
@@ -65,17 +77,68 @@
     <!-- the "hidden" class when the Login button is clicked. -->
     <div id="subjects-page" class="page hidden">
         <div class="card blue-card subjects-card">
-            <h2 class="subjects-title">SUBJECTS</h2>
+            <h2 class="subjects-title">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY - 3C</h2>
 
             <div class="subjects-list">
-                <p>SYSTEM INTEGRATION & ARCHITECTURE 1</p>
-                <p>CISCO 3</p>
-                <p>DATABASE MANAGEMENT 1</p>
-                <p>HUMAN COMPUTER INTERACTION</p>
-                <p>UNDERSTANDING THE SELF</p>
-                <p>LIFE AND WORKS OF RIZAL</p>
-                <p>ETHICS</p>
+
+                <table class="grades-table">
+
+                    <thead>
+                        <tr>
+                            <th>SUBJECT</th>
+                            <th>GRADE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>SYSTEM INTEGRATION & ARCHITECTURE 1</td>
+                            <td>95</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>CISCO 3</td>
+                            <td>92</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>DATABASE MANAGEMENT 1</td>
+                            <td>90</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>HUMAN COMPUTER INTERACTION</td>
+                            <td>94</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>UNDERSTANDING THE SELF</td>
+                            <td>88</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>LIFE AND WORKS OF RIZAL</td>
+                            <td>91</td>
+                            <td>PASSED</td>
+                        </tr>
+
+                        <tr>
+                            <td>ETHICS</td>
+                            <td>89</td>
+                            <td>PASSED</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
             </div>
+            <button id="btn-logout">Logout</button>
         </div>
     </div>
 
